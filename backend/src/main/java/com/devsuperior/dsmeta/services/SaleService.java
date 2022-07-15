@@ -9,6 +9,7 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
+
 import com.devsuperior.dsmeta.entities.Sale;
 import com.devsuperior.dsmeta.repositories.SaleRepository;
 
@@ -17,6 +18,7 @@ public class SaleService {
 	
 	@Autowired
 	private SaleRepository repository;
+	
 	
 	public Page<Sale> findSales(String minDate, String maxDate, Pageable pageable) {
 		
@@ -28,5 +30,7 @@ public class SaleService {
 		
 		return repository.findSales(min, max, pageable);
 	}
+	
+
 
 }
